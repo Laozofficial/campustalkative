@@ -1,0 +1,15 @@
+.home {
+  background: url("../src/assets/assets/img/agreement-black-business-943630.jpg") no-repeat center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #343a40;
+  background-blend-mode: soft-light;
+  min-height: 100vh;
+  height: fit-content;
+  min-width: 100%;
+}
+
+.navbar {
+  background-color: transparent;
+}
