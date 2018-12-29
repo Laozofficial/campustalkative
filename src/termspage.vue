@@ -36,6 +36,7 @@
   <router-link to="/contact" class="btn subtitle link"><i class="fa fa-envelope"></i> Contact us</router-link>
 </p>
 </div>
+<footer></footer>
 </div>
 </template>
 

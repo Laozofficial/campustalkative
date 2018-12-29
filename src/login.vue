@@ -13,7 +13,7 @@
     <label for="password"><i class="fa fa-lock"></i> Password</label>
     <input type="password" class="form-control" id="password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  <router-link to="/feed" id="submit"><button  type="submit" class="btn btn-primary btn-block">Submit <div id="spinner" uk-spinner style="display:none"></div></button></router-link>
     <small class="form-text uk-align-right">Have no account? <router-link class="link" to="/Register">Register</router-link></small>
 </form>
 <small>
@@ -122,18 +122,24 @@ input[type="email"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 input[type="password"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 input[type="text"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 h1,

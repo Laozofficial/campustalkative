@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Footer from './footer.vue'
 import Login from './login.vue'
 import Register from './register.vue'
 import NewsFeed from './newsfeed.vue'
@@ -34,8 +35,8 @@ Vue.component('register', Register);
 Vue.component('newsfeed', NewsFeed);
 Vue.component('readmore', ReadMore);
 Vue.component('index', Index);
+Vue.component('footer', Footer);
 Vue.component('editprofile', EditProfile);
-// Vue.component('header', Header);
 Vue.component('termspage', TermsPage);
 Vue.component('forgetpassword', ForgetPassword)
 Vue.component('unknown', Unknown);

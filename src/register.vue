@@ -141,6 +141,8 @@ input[type="email"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 input[type="password"]:focus {
@@ -149,11 +151,15 @@ input[type="password"]:focus {
   border: 1px solid #ff9100;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 input[type="text"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 </style>
