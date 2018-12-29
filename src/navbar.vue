@@ -1,40 +1,41 @@
 <template lang="html">
-<div class="home">
 
-<navbar></navbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+  <router-link to="/" class="navbar-brand animated slideInLeft dely-2s">
+    <img src="../src/assets/assets/img/campusLogoWhite.png" width="300" height="300">
+  </router-link>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-
-<div class="container body">
-  <h1 class="header animated fadeIn delay-2s">
-    <br>
-    <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left logo" width="70" height="70">
-    posts - watch - share .....
-    <br>
- </h1>
-  <p class="subtitle animated fadeIn delay-3s">We specialize in the open source technologies and as such campustalkative is aimed at making different people can post , update and delete information posted and it is available on all platforms </p>
-  <br>
-    <div class="containe">
-      <div class="row animated fadeIn delay-4s">
-        <div class="col-sm">
-          <router-link  class="btn btn-primary uk-align-left" to="/register">Get Started </router-link>
-        </div>
-        <!-- <div class="col-sm">
-          <router-link  class="btn btn-primary" to="/register">Subscribe to Newsletter </router-link>
-        </div>
-        <div class="col-sm">
-         <router-link  class="btn btn-primary" to="/register"></router-link>
-        </div> -->
-    </div>
-</div>
-</div>
-</div>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li> -->
+      <li class="nav-item">
+        <router-link to="/login"><span>Login</span></router-link>
+      </li>
+       <li class="nav-item">
+        <router-link to="/about"><span>About</span></router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/faq"><span>FaQ</span></router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/termspage"><span>Terms</span></router-link>
+      </li>
+    </ul>
+  </div>   
+  </div>
+</nav>
 
 </template>
 
 <script lang="js">
   export default  {
-    name: 'index',
+    name: 'navbar',
     props: [],
     mounted() {
 

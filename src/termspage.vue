@@ -1,5 +1,6 @@
 <template lang="html">
 <div class="home">
+  <navbar></navbar>
   <div class="container">
     <h2 class="display-4 uk-text-uppercase uk-text-center uk-text-bold link"><img src="../src/assets/assets/img/CT_Icon.png" width="70" height="70"> Terms And Condition</h2>
     <small class="subtitle uk-text-center uk-align-center">Last updated: 22 December 2018</small>
@@ -36,7 +37,7 @@
   <router-link to="/contact" class="btn subtitle link"><i class="fa fa-envelope"></i> Contact us</router-link>
 </p>
 </div>
-<footer></footer>
+<navfooter></navfooter>
 </div>
 </template>
 

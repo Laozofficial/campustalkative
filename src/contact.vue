@@ -1,5 +1,6 @@
 <template lang="html">
 <div class="home">
+  <navbar></navbar>
 <div class="container">
     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
       <div>
@@ -24,15 +25,16 @@
       <div>
           <div class="uk-card uk-card-default uk-card-body">
             <div class="uk-align-left contactcard">
-              <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-map"></i> Address: <span  class="subtitle link uk-text-capitalize">21 Asokoro Abuja Nigeria</span></h5>
-                <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-envelope-o"></i> Email: <span  class="subtitle link uk-text-capitalize">Campustaltative@admin.com</span></h5>
-                  <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-phone"></i> Phone: <span  class="subtitle link uk-text-capitalize">09098331785 </span></h5>
+              <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-map"></i> Address: <span  class="subtitle link uk-text-capitalize">{{ location.address }}</span></h5>
+                <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-envelope-o"></i> Email: <span  class="subtitle link uk-text-capitalize">{{ location.email }}</span></h5>
+                  <h5 class="subtitle link uk-text-uppercase uk-text-left"><i class="fa fa-phone"></i> Phone: <span  class="subtitle link uk-text-capitalize">{{ location.phone }} </span></h5>
                   <!-- <footer></footer> -->
             </div>
           </div>
       </div>
   </div>
 </div>
+<navfooter></navfooter>
 </div>
 </template>
 
@@ -45,7 +47,11 @@
     },
     data() {
       return {
-
+        location: {
+        email: "Campustaltative@admin.com",
+        phone: "09098311785",
+        address: "21 Asokoro Abuja Nigeria"
+        }
       }
     },
     methods: {

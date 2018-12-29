@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Footer from './footer.vue'
+import NavFooter from './navfooter.vue'
+import Faq from './faq.vue'
+import About from './about.vue'
 import Login from './login.vue'
+import Navbar from './navbar.vue'
 import Register from './register.vue'
 import NewsFeed from './newsfeed.vue'
 import Index from './index.vue'
@@ -23,10 +26,14 @@ import VueAxios from 'vue-axios';
 import Axios from 'axios';
 
 Vue.component('login', Login);
+Vue.component('navbar', Navbar);
+Vue.component('navfooter', NavFooter);
 Vue.component('sidebar', Sidebar);
 Vue.component('forum', Forum);
+Vue.component('about', About);
 Vue.component('contact', Contact);
 Vue.component('followers', Followers);
+Vue.component('faq', Faq);
 Vue.component('accountsettings', AccountSettings);
 Vue.component('event', Event);
 Vue.component('notification', Notification);
@@ -35,7 +42,6 @@ Vue.component('register', Register);
 Vue.component('newsfeed', NewsFeed);
 Vue.component('readmore', ReadMore);
 Vue.component('index', Index);
-Vue.component('footer', Footer);
 Vue.component('editprofile', EditProfile);
 Vue.component('termspage', TermsPage);
 Vue.component('forgetpassword', ForgetPassword)
@@ -53,6 +59,14 @@ const router = new VueRouter({
     {
       path: '/login',
       component: Login
+    },
+    {
+      path: '/about',
+      component: About
+    },
+    {
+      path: '/faq',
+      component: Faq
     },
     {
       path: '/register',
