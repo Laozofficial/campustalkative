@@ -13,8 +13,6 @@
               <br>
             <img src="../src/assets/assets/img/user.png" width="80" height="80" class="uk-border-circle">
             <p class="subtitle uk-text-center link">{{ person.username }}</p>
-            <!-- <p class="subtitle uk-text-center link">{{ person.firstname+ ' '+person.lastname }}</p> -->
-            <!-- <p class="subtitle uk-text-center link">{{ person.email }}</p> -->
             <br>
             <ul class="uk-list uk-list-bullet">
               <li>
@@ -27,7 +25,7 @@
             <router-link to="/event" class="subtitle uk-text-center link">Events</router-link>
               </li>
               <li>
-            <router-link to="/followers" class="subtitle uk-text-center link">Followers</router-link><span class="uk-badge">{{ person.followers }}</span>
+            <router-link to="/followers" class="subtitle uk-text-center link">Watchers</router-link><span class="uk-badge">{{ person.followers }}</span>
               </li>
               </ul>
             <!-- Settings -->
@@ -40,7 +38,7 @@
                   <router-link to="/notification" class="subtitle link">Notification</router-link><span class="uk-badge">{{ person.alerts }}</span>
                 </li>
                 <li class="lists">
-                  <router-link to="/privacy" class="subtitle link">Privacy</router-link>
+                  <router-link to="/policy" class="subtitle link">Policies</router-link>
                 </li>
                 <li class="lists">
                   <router-link to="/accountsettings" class="subtitle link">Account Settings</router-link>

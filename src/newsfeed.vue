@@ -95,25 +95,25 @@
                   school: "FutMinna",
                   title: "This is post one from the array",
                   content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
-                  image: "../src/assets/assets/img/agreement-black-business-943630.jpg"  
+                  image: "../src/assets/assets/img/coolemoji.png"  
           },
           {   
                   school: "Ahmedu Bello University",
                   title: "This is post two from the array",
                   content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
-                  image: "../src/assets/assets/img/agreement-black-business-943630.jpg"  
+                  image: "../src/assets/assets/img/bg.jpg"  
           },
           {
                   school: "University of lagos",
                   title: "This is post three from the array",
                   content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
-                  image: "../src/assets/assets/img/agreement-black-business-943630.jpg"  
+                  image: "../src/assets/assets/img/qpbg.jpg"  
           },
           {
                   school: "Oduduwa University",
                   title: "This is post four from the array",
                   content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
-                  image: "../src/assets/assets/img/agreement-black-business-943630.jpg"  
+                  image: "../src/assets/assets/img/dashboard.jpg"  
           },
         ]
       }

@@ -15,14 +15,11 @@
   </div>
   <div id="modal-example" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title"> <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left logo" width="40" height="40"></h2>
-        <br>
-        <br>
-        <p><img src="../src/assets/assets/img/coolemoji.png" width="70" height="70" class="uk-align-center"></p>
+        <h2 class="uk-modal-title"> <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-center logo" width="40" height="40"></h2>
+        <!-- <p><img src="../src/assets/assets/img/coolemoji.png" width="70" height="70" class="uk-align-center"></p> -->
         <p class="subtitle">A link has been sent to your email , Please login to your email click on the link to retrieve password</p>
         <p class="uk-text-right">
-            <button class="btn uk-modal-close" type="button">Ok</button>
-            <!-- <button class="" type="button">Save</button> -->
+          <router-link to="/login"><button class="btn uk-modal-close" type="button">Ok</button></router-link>
         </p>
     </div>
 </div>
@@ -182,7 +179,7 @@ p {
 
 .uk-modal-body {
   // background-color: transparent;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .subtitle {
   letter-spacing: 4px !important;

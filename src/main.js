@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import NavFooter from './navfooter.vue'
 import Faq from './faq.vue'
+import Policy from './policy.vue'
 import About from './about.vue'
 import Login from './login.vue'
 import Navbar from './navbar.vue'
@@ -34,6 +35,7 @@ Vue.component('about', About);
 Vue.component('contact', Contact);
 Vue.component('followers', Followers);
 Vue.component('faq', Faq);
+Vue.component('policy', Policy);
 Vue.component('accountsettings', AccountSettings);
 Vue.component('event', Event);
 Vue.component('notification', Notification);
@@ -91,6 +93,10 @@ const router = new VueRouter({
     {
       path: '/forgetpassword',
       component: ForgetPassword
+    },
+    {
+      path: '/policy',
+      component: Policy
     },
     {
       path: '/forum',
