@@ -11,7 +11,9 @@
               <br>
               <br>
               <br>
+              <router-link to="/profile">
             <img src="../src/assets/assets/img/user.png" width="80" height="80" class="uk-border-circle">
+            </router-link>
             <p class="subtitle uk-text-center link">{{ person.username }}</p>
             <br>
             <ul class="uk-list uk-list-bullet">
@@ -47,21 +49,13 @@
                   <router-link to="/faQ" class="subtitle link">faQ</router-link>
                 </li>
                 <li class="lists">
-                  <router-link to="/logout" class="subtitle link">Logout</router-link>
+                  <router-link to="/" class="subtitle link">Logout</router-link>
                 </li>
             </ul>
           </div>
       </div>
     </div>
-  <form class="form-inline uk-visible@m">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-      </div>
-      <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
-    </div>
-  </form>
-      <img src="../src/assets/assets/img/CTLogo_All white.png" class="uk-align-left nav-image uk-hidden@m" width="80" height="80">
+      <router-link to="/"><img src="../src/assets/assets/img/CTLogo_All white.png" class="uk-align-left nav-image" width="180" height="180"></router-link>
     </div>
 </nav>
 
@@ -138,6 +132,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   // font-size: 20px;
+  text-decoration-color: transparent;
 }
 
 .uk-badge {
@@ -273,6 +268,7 @@ label {
   text-decoration-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  text-decoration-color: transparent;
 }
 
 #presentation {

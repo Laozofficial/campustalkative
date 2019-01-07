@@ -14,7 +14,7 @@
     <input type="password" class="form-control" id="password" placeholder="Password">
   </div>
   <router-link to="/feed" id="submit"><button  type="submit" class="btn btn-primary btn-block">Submit <div id="spinner" uk-spinner style="display:none"></div></button></router-link>
-    <small class="form-text uk-align-right">Have no account? <router-link class="link" to="/Register">Register</router-link></small>
+    <small class="form-text uk-align-right">no account? <router-link class="link" to="/Register">Register</router-link></small>
 </form>
 <small>
   <router-link class="uk-text-left uk-align-left link" to="/forgetpassword">Forget password</router-link>

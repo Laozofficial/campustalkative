@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
   <router-link to="/" class="navbar-brand animated slideInLeft dely-2s">
-    <img src="../src/assets/assets/img/campusLogoWhite.png" width="300" height="300">
+    <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left" width="80" height="80">
   </router-link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,9 +11,6 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> -->
       <li class="nav-item">
         <router-link to="/login"><span>Login</span></router-link>
       </li>

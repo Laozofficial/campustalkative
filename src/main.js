@@ -22,6 +22,7 @@ import Logout from './logout.vue'
 import Notification from './notification.vue'
 import Contact from './contact.vue'
 import ReadMore from './readmore.vue'
+import Profile from './profile.vue'
 import VueRouter from 'vue-router';
 import VueAxios from 'vue-axios';
 import Axios from 'axios';
@@ -35,6 +36,7 @@ Vue.component('about', About);
 Vue.component('contact', Contact);
 Vue.component('followers', Followers);
 Vue.component('faq', Faq);
+Vue.component('profile', Profile);
 Vue.component('policy', Policy);
 Vue.component('accountsettings', AccountSettings);
 Vue.component('event', Event);
@@ -103,6 +105,10 @@ const router = new VueRouter({
       component: Forum
     },
     {
+      path: '/profile',
+      component: Profile
+    },
+    {
       path: '/event',
       component: Event
     },
@@ -119,7 +125,7 @@ const router = new VueRouter({
       component: AccountSettings
     },
     {
-      path: '/logout',
+      path: '',
       component: Logout
     },
     {

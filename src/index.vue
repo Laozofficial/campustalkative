@@ -164,7 +164,7 @@ router-link:hover {
   letter-spacing: 8px !important;
   line-height: 40px !important;
   color: white !important;
-  font-weight: lighter;
+  font-weight: lighter !important;
   font-size: 20px;
 }
 </style>
