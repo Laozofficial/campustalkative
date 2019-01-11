@@ -5,7 +5,20 @@
        <p class="uk-h4 uk-text-center uk-align-center text-light">Welcome to the <span class="uk-text-uppercase">"{{ forum.name }}"</span> Forum  </p>
   </div>
   <div class="container">
+    <br>
+    <div class="uk-align-left">
+      <h4 class="link subtitle username"><i class="fa fa-user"></i> online: {{ forum.online }}</h4>
+    </div>
+    <br>
+    <br><br>
+  <div class="uk-align-center uk-card uk-card-body uk-card-default" v-for="chat in chats">
+    <img class="uk-border-circle uk-align-left uk-margin-remove-adjacent  " src="../src/assets/assets/img/user.png" width="40 " height="90 " alt="forum image " caption="forum image ">
+    <p class="uk-text-small link">{{ chat.username }} <span style="color:darkgray ">-</span><time class="uk-text-small text-light" style="color:darkgrey;font-size:0.8em ">{{ chat.time }}</time></p>
+    <p class="uk-text-small text-light subtitle" style="margin-left: 50px;">{{ chat.comment }}</p>
+  </div>
   
+
+
 
 
    <div class="container">
@@ -17,11 +30,11 @@
     <p class="message">what is on your mind ?</p>
 
     <form>
-      <input type="text" name="cpname" placeholder="Name:" required>
-      <input type="email" name="cpemail" placeholder="Email:" required>
-      <input type="tel" name="cpphone" placeholder="Phone:" required>
+      <input type="text" name="cpphone" placeholder="Subject:" required>
       <textarea name="cpmessage" placeholder="Message:" required></textarea>
+      <input type="file">
       <input type="submit" value="Send message">
+      <input type="email" name="cpemail" placeholder="Email:" style="visibility: hidden">
     </form>
   </div>
 	</div>
@@ -42,8 +55,25 @@
       return {
           forum: {
             name: "ASUU",
-
+            online: "23"
           },
+          chats: [
+            {
+              username: "Emmanuel",
+              time: "15minutes ago",
+              comment: "I think i love this websites"
+            },
+             {
+              username: "Laoz Ellison",
+              time: "12minutes ago",
+              comment: "yeah the websites is great"
+            },
+             {
+              username: "Ojay",
+              time: "8minutes ago",
+              comment: "wassup guys"
+            },
+          ],
       }
     },
     methods: {
@@ -59,6 +89,10 @@
 .uk-form-icon {
   color: green;
   // background-color: green;
+}
+
+.fa-user {
+  color: #69f0ae;
 }
 
 .home {
@@ -85,6 +119,13 @@ form {
   padding-left: 30%;
 }
 
+.uk-card {
+  background-color: transparent;
+  padding: 0;
+  border-color: #ff9100 !important;
+  padding-left: 5px;
+}
+
 textarea {
   border-radius: 20px;
   width: 50%;
@@ -94,6 +135,35 @@ textarea {
 .fa-send {
   padding-left: 0;
   margin-left: 0;
+}
+
+.username {
+  border: solid #ff9100 4px;
+  // background-color: white;
+  width: 214px;
+  padding: 10px;
+}
+
+.link {
+  color: #ff9100 !important;
+  font-weight: lighter;
+  text-decoration: none;
+  text-decoration-color: transparent;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration-color: transparent;
+  text-transform: lowercase;
+}
+
+.subtitle {
+  letter-spacing: 5px !important;
+  line-height: 19px !important;
+  color: white !important;
+  font-weight: lighter;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  // font-size: 20px;
+  text-decoration-color: transparent;
 }
 
 #sticky {

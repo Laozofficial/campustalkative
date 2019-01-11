@@ -3,7 +3,7 @@
 <div class="home">
   <div class="container">
     <sidebar></sidebar>
-    <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+    <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hover">
     <div class="uk-card-badge uk-label uk-text-lowercase">{{ school }}</div><br>
     <h3 class="uk-card-title uk-text-uppercase uk-text-center uk-text-bold">{{ Title }}</h3>
        <img src="../src/assets/assets/img/agreement-black-business-943630.jpg" alt="" class="uk-align-center hover">
@@ -16,11 +16,13 @@
     <p class="uk-text-left">
       {{ content }} 
       <span class="">
+        <br>
         <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m hover uk-align-center">
           <div class="uk-card-badge uk-label uk-text-lowercase">{{ relatedContent.school }}</div>
             <h6 class="uk-card-title">{{ relatedContent.title }}</h6>
             <p>{{ relatedContent.content }}</p>
-        </div>    
+        </div>
+        <br>    
       </span>
       <p class="uk-text-left">{{ content }}</p>
     </p>
@@ -82,7 +84,6 @@
   background-color: #ff9100;
 }
 
-
 h1,
 h2,
 h3,
@@ -95,30 +96,30 @@ label {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.facebook{
+.facebook {
   background-color: dodgerblue;
   color: white !important;
 }
 
-.twitter{
+.twitter {
   background-color: cornflowerblue;
   color: white !important;
 }
 
-.gplus{
+.gplus {
   background-color: red;
   color: white !important;
 }
 
-.hover{
-    background-color: #fff;
+.hover {
+  background-color: #fff;
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
 
-img{
+img {
   width: 730px;
   height: 300px;
-  border:solid  #ff9100;
-  padding:7px;
+  border: solid #ff9100;
+  padding: 7px;
 }
 </style>

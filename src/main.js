@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import NavFooter from './navfooter.vue'
 import Faq from './faq.vue'
+import ForumList from './forumlist.vue'
 import Policy from './policy.vue'
 import About from './about.vue'
 import Login from './login.vue'
@@ -42,6 +43,7 @@ Vue.component('accountsettings', AccountSettings);
 Vue.component('event', Event);
 Vue.component('notification', Notification);
 Vue.component('logout', Logout);
+Vue.component('forumlist', ForumList);
 Vue.component('register', Register);
 Vue.component('newsfeed', NewsFeed);
 Vue.component('readmore', ReadMore);
@@ -103,6 +105,10 @@ const router = new VueRouter({
     {
       path: '/forum',
       component: Forum
+    },
+    {
+      path: '/forumlist',
+      component: ForumList
     },
     {
       path: '/profile',

@@ -3,6 +3,14 @@
 <sidebar></sidebar>
 
 <div class="container">
+        <form class="uk-hidden@m">
+          <div class="form-group">
+              <label for="message-text" class="col-form-label">What's on your mind:</label>
+              <textarea class="form-control" row="30" id="message-text"></textarea>
+            </div>
+            <button class="btn subtitle uk-align-right"><i class="fa fa-send"></i> post</button>
+        </form>
+        <br><br>
   <h2 class="display-4 uk-text-center uk-text-uppercase">Today</h2><br>
   <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid >
     <div v-for="feed in newsfeeds">
@@ -31,7 +39,7 @@
 
 
 <!-- floating button-->
-<div id="container-floating" class="container">
+<div id="container-floating" class="container uk-visible@m">
   <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
     <p class="plus">+</p>
     <img class="edit" data-toggle="modal" data-target="#exampleModal" data-whatever="title" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">

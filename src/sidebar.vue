@@ -21,7 +21,7 @@
             <router-link to="/feed" class="subtitle uk-text-center link">News Feed</router-link>
               </li>
               <li>
-            <router-link to="/forum" class="subtitle uk-text-center link">Forum</router-link>
+            <router-link to="/forumlist" class="subtitle uk-text-center link">Forum</router-link>
               </li>
               <li>
             <router-link to="/event" class="subtitle uk-text-center link">Events</router-link>

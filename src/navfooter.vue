@@ -3,7 +3,7 @@
 <div class="footer">
   <div class="container">
   <div class="uk-align-center uk-text-center">
-    <h4 class="subtitle link uk-text-capitalize ">&copy; campustalkative 2018 | Designed by <a href="https://www.laozofficial.com.ng" class="text-danger">Laoz Ellison</a></h4>
+    <h4 class="subtitle link uk-text-capitalize ">&copy; campustalkative 2018 | Designed by <a href="#" class="text-danger">CampusTalkative Team</a></h4>
   </div>
 </div>
 </div>

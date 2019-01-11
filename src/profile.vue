@@ -2,21 +2,12 @@
 <div class="home">
   <sidebar></sidebar>
   <div class="container">
+
+<br>
     <div class="uk-align-center">
       <img src="../src/assets/assets/img/user.png" width="80" height="80" class="uk-border-circle uk-align-center">
       <p class="subtitle uk-text-center link uk-align-center username">{{ person.username }}</p>
     </div>
-  <!-- <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
-    <div>
-        <div class="t-grid">Item</div>
-    </div>
-    <div>
-        <div class="t-grid">Item</div>
-    </div>
-    <div>
-        <div class="t-grid">Item</div>
-    </div>
-</div> -->
 <div class="uk-flex uk-flex-center">
     <div class="t-grid subtitle link">POST <span class="uk-badge">{{ person.posts }}</span></div>
     <div class="t-grid subtitle link">WATCHING <span class="uk-badge">{{ person.following }}</span></div>
@@ -26,7 +17,7 @@
   <h4 class="display-4 uk-text-center uk-text-uppercase  username  uk-align-center">About you</h4>
   <p class="about uk-text-center">The Flex component has an essential role in building layouts in UIkit. A lot of components, for example the Grid </p>
   <h4 class="display-4 uk-text-center uk-text-uppercase username  uk-align-center">Personal Timeline</h4>
-<div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid >
+<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-overflow-auto uk-height-large " uk-grid >
     <div v-for="feed in newsfeeds">
         <div class="uk-card uk-card-default uk-card-body">
           <div class="title">
@@ -43,10 +34,20 @@
         </div>
     </div>
 </div>
+
 </div>
 
 
   </div>
+   <div class="uk-tile uk-tile-default uk-padding-small uk-hidden@m">
+    <div class="uk-flex uk-flex-center">
+      <div class="social-btn"><router-link class="is-white" to="/feed"><span uk-icon="icon: rss; ratio: 1.1"></span></router-link> </div>
+      <div class="social-btn"><router-link class="is-white" to="/feed"><span uk-icon="icon: social; ratio: 1.1"></span></router-link> </div>
+      <div class="social-btn"><router-link class="is-white" to="/notification"><span uk-icon="icon: hashtag; ratio: 1.1"></span></router-link> </div>
+      <div class="social-btn"><router-link class="is-white" to="/forum"><span uk-icon="icon:  comments; ratio: 1.1"></span></router-link> </div>
+      <br>
+  </div>
+ </div>
 </div>
 </template>
 
@@ -125,6 +126,10 @@
   font-family: "Lato", sans-serif;
 }
 
+// .timeline {
+//   overflow-x: scroll;
+// }
+
 .about {
   color: lightgrey !important;
   letter-spacing: 5px !important;
@@ -145,6 +150,14 @@
   padding: 10px;
 }
 
+.uk-tile {
+  background-color: #ff9100;
+}
+
+a.uk-navbar-toggle {
+  font-size: 1.5em;
+}
+
 .t-grid:hover {
   margin-left: 0;
   margin-right: 0;
@@ -159,6 +172,16 @@
   background-color: transparent;
   padding: 0;
   border-color: #ff9100 !important;
+}
+
+.social-btn {
+  margin-left: 19px;
+  color: white;
+}
+
+.is-white {
+  color: white;
+  font-weight: bolder;
 }
 
 .title {
