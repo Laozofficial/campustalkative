@@ -20,17 +20,17 @@
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-overflow-auto uk-height-large " uk-grid >
     <div v-for="feed in newsfeeds">
         <div class="uk-card uk-card-default uk-card-body">
-          <div class="title">
-            <p class="subtitle link uk-text-capitalize uk-text-bold uk-text-small"> <i class="fa fa-link"></i> {{ feed.school }}</p>
-          </div>
-          <div class="uk-inline">
-            <router-link to="/readmore">
-              <img src="../src/assets/assets/img/agreement-black-business-943630.jpg" alt="">
-              <div class="uk-overlay uk-overlay-primary uk-position-bottom">
-                <p class="subtitle link uk-text-capitalize uk-text-bold">{{ feed.title }}</p>
+           <div>
+              <div class="uk-inline full-width">
+                <router-link to="/readmore">
+                  <img src="../src/assets/assets/img/luca-bravo-149740.395.jpg" class="full-width">
+                </router-link>
+                  <span class="uk-badge uk-position-top uk-text-lowercase"><i class="fa fa-home"></i>  {{ feed.school }}</span>
+                  <div class="uk-overlay uk-light uk-position-bottom">
+                      <p class="uk-text-truncat">Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
             </div>
-            </router-link>
-          </div>
         </div>
     </div>
 </div>
@@ -140,6 +140,40 @@
     "Lucida Sans", Arial, sans-serif;
   // font-size: 20px;
   text-decoration-color: transparent;
+}
+
+.full-width {
+  border-radius: 13px !important;
+  width: 100% !important;
+}
+
+.uk-badge {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.schoolfeed {
+  opacity: 1;
+}
+
+.uk-overlay {
+  background-color: #ff9100;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  // opacity: 0.3;
+  border-radius: 13px !important;
+}
+
+.fa-home {
+  color: white;
+}
+
+.uk-light {
+  border-top-color: #ff9100;
+  background-color: transparent !important;
+  color: white !important;
 }
 
 .t-grid {

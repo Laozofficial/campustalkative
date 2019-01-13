@@ -7,6 +7,7 @@ import Policy from './policy.vue'
 import About from './about.vue'
 import Login from './login.vue'
 import Navbar from './navbar.vue'
+import Blog from './blog.vue'
 import Register from './register.vue'
 import NewsFeed from './newsfeed.vue'
 import Index from './index.vue'
@@ -43,6 +44,7 @@ Vue.component('accountsettings', AccountSettings);
 Vue.component('event', Event);
 Vue.component('notification', Notification);
 Vue.component('logout', Logout);
+Vue.component('blog', Blog);
 Vue.component('forumlist', ForumList);
 Vue.component('register', Register);
 Vue.component('newsfeed', NewsFeed);
@@ -61,6 +63,10 @@ const router = new VueRouter({
   routes: [{
       path: '',
       component: Index
+    },
+    {
+      path: '/blog',
+      component: Blog
     },
     {
       path: '/login',

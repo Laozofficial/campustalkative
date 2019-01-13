@@ -6,7 +6,9 @@
     <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hover">
     <div class="uk-card-badge uk-label uk-text-lowercase">{{ school }}</div><br>
     <h3 class="uk-card-title uk-text-uppercase uk-text-center uk-text-bold">{{ Title }}</h3>
+    <div uk-lightbox>
        <img src="../src/assets/assets/img/agreement-black-business-943630.jpg" alt="" class="uk-align-center hover">
+    </div>
       <div class="uk-text-center uk-align-center">
         <p class="uk-text-center link">share this post</p>
         <a href="" class="uk-icon-button facebook uk-margin-small-right" uk-icon="twitter"></a>

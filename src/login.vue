@@ -2,18 +2,24 @@
 <div class="home">
   <div class="container">
     <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center">
-       <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-center logo" width="70" height="70">
-    <form action="#">
+       <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-center logo animated fadeIn delay-1s" width="70" height="70">
+    <form action="#" @submit="checkForm" method="post">
+      <p v-if="errors.length">
+    <b class="text-light">Please correct the following error(s):</b>
+    <ul class="uk-list">
+      <li v-for="error in errors" class="text-light"><i class="fa fa-warning"></i> {{ error }}</li>
+    </ul>
+  </p>
   <div class="form-group">
     <label for="email"><i class="fa fa-envelope"></i> Email</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email">
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" v-model="email">
     <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="password"><i class="fa fa-lock"></i> Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" placeholder="Password" v-model="password">
   </div>
-  <router-link to="/feed" id="submit"><button  type="submit" class="btn btn-primary btn-block">Submit <div id="spinner" uk-spinner style="display:none"></div></button></router-link>
+  <input  type="submit" class="btn btn-primary btn-block" value="submit">
     <small class="form-text uk-align-right">no account? <router-link class="link" to="/Register">Register</router-link></small>
 </form>
 <small>
@@ -33,11 +39,31 @@
     },
     data() {
       return {
-
+         errors: [],
+       email: null,
+       password: null
       }
     },
     methods: {
+        checkForm: function (e) {
+      if (this.email && this.password) {
+        return true;
+      }
 
+      this.errors = [];
+
+      if (!this.email) {
+        this.errors.push('Email required.');
+      }
+      if (!this.password) {
+        this.errors.push('Password required.');
+      }
+      if (this.password < 7){
+        this.errors.push('password should not be less than 8 characters');
+      }
+
+      e.preventDefault();
+    }
     },
     computed: {
 
@@ -51,6 +77,10 @@
   font-weight: bolder;
   text-decoration: none;
   text-decoration-color: transparent;
+}
+
+.fa-warning {
+  color: yellow;
 }
 
 .home {
@@ -135,6 +165,14 @@ input[type="password"]:focus {
 }
 
 input[type="text"]:focus {
+  box-shadow: 0 0 5px #ff9100;
+  padding: 3px 3px 3px 3px;
+  border: 1px solid #ff9100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+input[type="submit"]:focus {
   box-shadow: 0 0 5px #ff9100;
   padding: 3px 3px 3px 3px;
   border: 1px solid #ff9100;

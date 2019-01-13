@@ -1,71 +1,91 @@
 <template lang="html">
+<div class="home">
+<sidebar></sidebar>
 
-<nav class="navbar">
-  <div class="container">
-     <div class="uk-offcanvas-content">
-      <i class="fa fa-bars" uk-toggle="target: #offcanvas-overlay"><span class="uk-text-uppercase">menu</span></i>
-      <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
-          <div class="uk-offcanvas-bar">
-              <button class="uk-offcanvas-close" type="button" uk-close></button>
-              <router-link to="/">
-              <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left" width="40" height="40">
-              </router-link>
+<div class="container">
+        <form class="uk-hidden@m">
+          <div class="form-group">
+              <label for="message-text" class="col-form-label">What's on your mind:</label>
+              <textarea class="form-control" row="30" id="message-text"></textarea>
               <br>
-              <br>
-              <br>
-              <router-link to="/profile">
-            <img src="../src/assets/assets/img/user.png" width="80" height="80" class="uk-border-circle">
-            </router-link>
-            <p class="subtitle uk-text-center link">{{ person.username }}</p>
+              <input type="file">
+            </div>
+            <button class="btn subtitle uk-align-right"><i class="fa fa-send"></i> post</button>
+        </form>
+        <br><br>
+  <h2 class="display-4 uk-text-center uk-text-uppercase">Campustalkative Blog</h2><br>
+  <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid >
+    <div v-for="feed in newsfeeds">
+        <div class="uk-card uk-card-default uk-card-body">
+           <div>
+              <div class="uk-inline full-width">
+                <router-link to="/readmore">
+                  <img src="../src/assets/assets/img/luca-bravo-149740.395.jpg" class="full-width">
+                </router-link>
+                  <span class="uk-badge uk-position-top uk-text-lowercase"><i class="fa fa-home"></i>  {{ feed.tag }}</span>
+                  <div class="uk-overlay uk-light uk-position-bottom">
+                      <p class="uk-text-truncate">{{ feed.title }}</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+</div>
+
+
+
+
+
+
+
+<!-- floating button-->
+<div id="container-floating" class="container uk-visible@m">
+  <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
+    <p class="plus">+</p>
+    <img class="edit" data-toggle="modal" data-target="#exampleModal" data-whatever="title" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
+  </div>
+</div>
+
+<!--post status modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Post New Status</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">What's on your mind:</label>
+            <textarea class="form-control" row="30" id="message-text"></textarea>
             <br>
-            <ul class="uk-list uk-list-bullet">
-              <li>
-            <router-link to="/feed" class="subtitle uk-text-center link">News Feed</router-link>
-              </li>
-              <li>
-            <router-link to="/forumlist" class="subtitle uk-text-center link">Forum</router-link>
-              </li>
-              <li>
-            <router-link to="/event" class="subtitle uk-text-center link">Events</router-link>
-              </li>
-              <li>
-            <router-link to="/followers" class="subtitle uk-text-center link">Watchers</router-link><span class="uk-badge">{{ person.followers }}</span>
-              </li>
-              </ul>
-            <!-- Settings -->
-            <h2 class="display-4 uk-text-left uk-text-uppercase">Settings</h2>
-            <ul class="uk-list uk-list-bullet">
-                <li class="lists">
-                  <router-link to="/editprofile" class="subtitle link">Edit profile</router-link>
-                </li>
-                <li class="lists">
-                  <router-link to="/notification" class="subtitle link">Notification</router-link><span class="uk-badge">{{ person.alerts }}</span>
-                </li>
-                <li class="lists">
-                  <router-link to="/policy" class="subtitle link">Policies</router-link>
-                </li>
-                <li class="lists">
-                  <router-link to="/accountsettings" class="subtitle link">Account Settings</router-link>
-                </li>
-                <li class="lists">
-                  <router-link to="/faQ" class="subtitle link">faQ</router-link>
-                </li>
-                <li class="lists">
-                  <router-link to="/" class="subtitle link">Logout</router-link>
-                </li>
-            </ul>
+            <input type="file">
           </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-block">Send message <i class="fa fa-send"></i></button>
       </div>
     </div>
-      <router-link to="/"><img src="../src/assets/assets/img/CTLogo_All white.png" class="uk-align-left nav-image" width="180" height="180"></router-link>
-    </div>
-</nav>
+  </div>
+</div>
+</div>
+
+
+<!--floating button-->
 
 </template>
 
+
 <script lang="js">
   export default  {
-    name: 'sidebar',
+    name: 'blog',
     props: [],
     mounted() {
 
@@ -82,6 +102,33 @@
         followers: "759",
         alerts: "78"
         },
+
+        newsfeeds: [
+                {
+                  tag: "New Releases",
+                  title: "This is post one from the array",
+                  content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
+                  image: "../src/assets/assets/img/coolemoji.png"  
+          },
+          {   
+                  tag: "Android application download",
+                  title: "This is post two from the array",
+                  content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
+                  image: "../src/assets/assets/img/bg.jpg"  
+          },
+          {
+                  tag: "Buy houses on CPTT",
+                  title: "This is post three from the array",
+                  content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
+                  image: "../src/assets/assets/img/qpbg.jpg"  
+          },
+          {
+                  tag: "Join our Team",
+                  title: "This is post four from the array",
+                  content: "This is the full post content from the array but you'd have to click on the readmore button to vie the complete post",
+                  image: "../src/assets/assets/img/dashboard.jpg"  
+          },
+        ]
       }
     },
     methods: {
@@ -110,6 +157,40 @@
   font-family: "Lato", sans-serif;
 }
 
+.full-width {
+  border-radius: 13px !important;
+  width: 100% !important;
+}
+
+.uk-badge {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.schoolfeed {
+  opacity: 1;
+}
+
+.uk-overlay {
+  background-color: #ff9100;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  // opacity: 0.3;
+  border-radius: 13px !important;
+}
+
+.fa-home {
+  color: white;
+}
+
+.uk-light {
+  border-top-color: #ff9100;
+  background-color: transparent !important;
+  color: white !important;
+}
+
 .uk-card {
   background-color: transparent;
   padding: 0;
@@ -134,7 +215,6 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   // font-size: 20px;
-  text-decoration-color: transparent;
 }
 
 .uk-badge {
@@ -172,8 +252,8 @@ span {
 // }
 
 .btn {
-  background-color: #00c853 !important;
-  border-color: #00c853;
+  background-color: #ff9100 !important;
+  border-color: #ff9100;
   border-radius: 290486px;
   color: white;
   padding-left: 2em;
@@ -236,7 +316,7 @@ h5 {
 }
 
 .modal-content {
-  background-color: #343a40;
+  background-color: white;
   background-image: url("../src/assets/assets/img/agreement-black-business-943630.jpg");
   background-blend-mode: darken;
 }
@@ -270,7 +350,6 @@ label {
   text-decoration-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  text-decoration-color: transparent;
 }
 
 #presentation {

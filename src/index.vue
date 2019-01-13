@@ -7,7 +7,7 @@
 <div class="container body">
   <h1 class="header animated fadeIn delay-2s">
     <br>
-    <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left logo" width="70" height="70">
+    <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left logo" width="70" height="50">
     posts - watch - share .....
     <br>
  </h1>
@@ -70,7 +70,7 @@
 nav {
   background-color: transparent !important;
   padding-top: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   padding-right: 2em;
 }
 
@@ -161,8 +161,8 @@ router-link:hover {
 }
 
 .subtitle {
-  letter-spacing: 8px !important;
-  line-height: 40px !important;
+  letter-spacing: 5px !important;
+  line-height: 30px !important;
   color: white !important;
   font-weight: lighter !important;
   font-size: 20px;

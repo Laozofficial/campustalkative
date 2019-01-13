@@ -30,10 +30,10 @@
     <p class="message">what is on your mind ?</p>
 
     <form>
-      <input type="text" name="cpphone" placeholder="Subject:" required>
-      <textarea name="cpmessage" placeholder="Message:" required></textarea>
+      <input type="text" name="cpphone" placeholder="Subject:" required v-model="username">
+      <textarea name="cpmessage" placeholder="Message:" required v-model="comment"></textarea>
       <input type="file">
-      <input type="submit" value="Send message">
+      <input type="submit" value="Send message" v-on:click="submit()">
       <input type="email" name="cpemail" placeholder="Email:" style="visibility: hidden">
     </form>
   </div>
@@ -57,6 +57,9 @@
             name: "ASUU",
             online: "23"
           },
+           username: '',
+           time: '5minutes',
+           comment: '',
           chats: [
             {
               username: "Emmanuel",
@@ -77,7 +80,11 @@
       }
     },
     methods: {
+        submit: function(){
+            this.chats.push(this.username && this.comment && this.time);
+        }
 
+      
     },
     computed: {
 

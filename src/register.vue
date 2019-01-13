@@ -3,30 +3,37 @@
   <div class="container">
     <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center">
        <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-center logo" width="70" height="70">
-    <form>
+    <form  action="#" @submit="checkForm" method="post">
+      <p v-if="errors.length">
+    <b class="text-light">Please correct the following error(s):</b>
+    <ul class="uk-list">
+      <li v-for="error in errors" class="text-light"><i class="fa fa-warning"></i> {{ error }}</li>
+    </ul>
+  </p>
       <div class="form-group">
     <label for="username"><i class="fa fa-user"></i> Username</label>
-    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+    <input type="text" class="form-control" id="username" placeholder="Enter Username" v-model="username">
   </div>
   <div class="form-group">
     <label for="email"><i class="fa fa-envelope"></i> Email</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email">
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" v-model="email">
     <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="password"><i class="fa fa-lock"></i> Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" placeholder="Password" v-model="password">
   </div>
   <div class="form-group">
     <label for="confirmpassword"><i class="fa fa-lock"></i> Confirm Password</label>
-    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password">
+    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" v-model="password2">
   </div>
-  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  <input value=submit type="submit" class="btn btn-primary btn-block">
     <small class="form-text uk-align-right">Already have an account? <router-link class="link" to="/login">Login here</router-link></small>
 </form>
 <br>
 <br>
 <small class="subtitle uk-text-center uk-align-center">By registering you are agreeing to our <br><br><router-link class="link" to="/termspage">Terms and services</router-link></small>
+
 </div>
   </div>
 </div>
@@ -42,15 +49,41 @@
     },
     data() {
       return {
-
+       errors: [],
+       username: null,
+       email: null,
+       password: null,
+       password2: null,
       }
     },
     methods: {
-        submit: function(){
-          if (condition) {
-            
+         checkForm: function (e) {
+          if (this.username && this.password && this.email && this.password2) {
+            return true;
           }
-        }
+
+          this.errors = [];
+
+          if (!this.email) {
+            this.errors.push('Email required.');
+          }
+          if (!this.password) {
+            this.errors.push('Password required.');
+          }
+          if (!this.password2){
+            this.errors.push('The Confirm Password field is required');
+          }
+          if(!this.username){
+            this.errors.push('Username required');
+          }
+          if(this.password !== this.password2){
+            this.errors.push('passwords do not match ');
+          }
+          
+        e.preventDefault();
+        // this.$router.push('/feed');
+      },
+
     },
     computed: {
 
@@ -66,6 +99,10 @@
   text-decoration-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.fa-warning {
+  color: yellow;
 }
 
 h1,

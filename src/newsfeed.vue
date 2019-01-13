@@ -3,29 +3,38 @@
 <sidebar></sidebar>
 
 <div class="container">
-        <form class="uk-hidden@m">
+        
+        <form class="uk-hidden@m" action="#" @submit="checkForm" method="post">
+          <p v-if="errors.length">
+          <b class="text-light">Please correct the following error(s):</b>
+          <ul class="uk-list">
+            <li v-for="error in errors" class="text-light"><i class="fa fa-warning"></i> {{ error }}</li>
+          </ul>
+        </p>
           <div class="form-group">
               <label for="message-text" class="col-form-label">What's on your mind:</label>
-              <textarea class="form-control" row="30" id="message-text"></textarea>
+              <textarea class="form-control" row="30" id="message-text" v-model="message" ></textarea>
             </div>
-            <button class="btn subtitle uk-align-right"><i class="fa fa-send"></i> post</button>
+             <input type="file">
+                <br>
+            <input class="btn subtitle uk-align-center btn-block" type="submit" vlaue="submit">
         </form>
         <br><br>
   <h2 class="display-4 uk-text-center uk-text-uppercase">Today</h2><br>
-  <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid >
+  <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match" uk-grid >
     <div v-for="feed in newsfeeds">
         <div class="uk-card uk-card-default uk-card-body">
-          <div class="title">
-            <p class="subtitle link uk-text-capitalize uk-text-bold uk-text-small"> <i class="fa fa-link"></i> {{ feed.school }}</p>
-          </div>
-          <div class="uk-inline">
-            <router-link to="/readmore">
-              <img src="../src/assets/assets/img/agreement-black-business-943630.jpg" alt="">
-              <div class="uk-overlay uk-overlay-primary uk-position-bottom">
-                <p class="subtitle link uk-text-capitalize uk-text-bold">{{ feed.title }}</p>
+           <div>
+              <div class="uk-inline full-width">
+                <router-link to="/readmore">
+                  <img src="../src/assets/assets/img/luca-bravo-149740.395.jpg" class="full-width">
+                </router-link>
+                  <span class="uk-badge uk-position-top uk-text-lowercase"><i class="fa fa-home"></i>  {{ feed.school }}</span>
+                  <div class="uk-overlay uk-light uk-position-bottom">
+                      <p class="uk-text-truncat">Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+              </div>
             </div>
-            </router-link>
-          </div>
         </div>
     </div>
 </div>
@@ -63,6 +72,7 @@
             <label for="message-text" class="col-form-label">What's on your mind:</label>
             <textarea class="form-control" row="30" id="message-text"></textarea>
           </div>
+             <input type="file">
         </form>
       </div>
       <div class="modal-footer">
@@ -87,6 +97,9 @@
     },
     data() {
       return {
+          errors: [],
+          message: null,
+
         person: {
         id: 23445,
         firstname: "Laoz",
@@ -127,7 +140,19 @@
       }
     },
     methods: {
+          checkForm: function (e) {
+      if (this.message) {
+        return true;
+      }
 
+      this.errors = [];
+
+      if (!this.message) {
+        this.errors.push('Type a message');
+      }
+
+      e.preventDefault();
+    }
     },
     computed: {
 
@@ -152,10 +177,46 @@
   font-family: "Lato", sans-serif;
 }
 
+.full-width {
+  border-radius: 13px !important;
+  width: 100% !important;
+}
+
+.uk-badge {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.schoolfeed {
+  opacity: 1;
+}
+
+.uk-overlay {
+  background-color: #ff9100;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  // opacity: 0.3;
+  border-radius: 13px !important;
+}
+
+.fa-home {
+  color: white;
+}
+
+.uk-light {
+  border-top-color: #ff9100;
+  background-color: transparent !important;
+  color: white !important;
+}
+
 .uk-card {
   background-color: transparent;
   padding: 0;
   border-color: #ff9100 !important;
+  border: 1px solid transparent;
+  border-radius: 13px !important;
 }
 
 .title {
@@ -213,8 +274,8 @@ span {
 // }
 
 .btn {
-  background-color: #00c853 !important;
-  border-color: #00c853;
+  background-color: #ff9100 !important;
+  border-color: #ff9100;
   border-radius: 290486px;
   color: white;
   padding-left: 2em;
@@ -223,6 +284,10 @@ span {
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.fa-warning {
+  color: yellow;
 }
 
 .danger {
@@ -247,6 +312,10 @@ p,
 label {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.fa-link {
+  color: #ff9100;
 }
 
 .content {
@@ -277,7 +346,7 @@ h5 {
 }
 
 .modal-content {
-  background-color: #343a40;
+  background-color: white;
   background-image: url("../src/assets/assets/img/agreement-black-business-943630.jpg");
   background-blend-mode: darken;
 }
