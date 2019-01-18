@@ -13,6 +13,7 @@ import NewsFeed from './newsfeed.vue'
 import Index from './index.vue'
 import Unknown from './unknown.vue'
 import TermsPage from './termspage.vue'
+import BottomNav from './bottom-nav.vue'
 import ForgetPassword from './forgetpassword.vue'
 import Forum from './forum.vue'
 import Followers from './followers.vue'
@@ -38,6 +39,7 @@ Vue.component('about', About);
 Vue.component('contact', Contact);
 Vue.component('followers', Followers);
 Vue.component('faq', Faq);
+Vue.component('bottomnav', BottomNav);
 Vue.component('profile', Profile);
 Vue.component('policy', Policy);
 Vue.component('accountsettings', AccountSettings);

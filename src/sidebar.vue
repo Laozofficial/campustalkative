@@ -1,6 +1,6 @@
 <template lang="html">
 
-<nav class="navbar">
+<nav class="navbar ">
   <div class="container">
      <div class="uk-offcanvas-content">
       <i class="fa fa-bars" uk-toggle="target: #offcanvas-overlay"><span class="uk-text-uppercase">menu</span></i>

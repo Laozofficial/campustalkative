@@ -40,7 +40,7 @@
 </div>
 <br>
 </div>
-
+  <bottomnav></bottomnav>
 
 
 

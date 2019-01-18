@@ -1,6 +1,6 @@
 <template lang="html">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div class="container">
   <router-link to="/" class="navbar-brand animated slideInLeft dely-2s">
     <img src="../src/assets/assets/img/CT_Icon.png" class="uk-align-left" width="80" height="80">

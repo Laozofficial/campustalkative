@@ -1,6 +1,12 @@
 <template lang="html">
 <div class="home">
   <sidebar></sidebar>
+
+  <!-- Attvach content here -->
+
+
+  <!--content ends here-->
+   <bottomnav></bottomnav>
 </div>
 
 </template>

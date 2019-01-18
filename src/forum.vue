@@ -15,6 +15,7 @@
     <img class="uk-border-circle uk-align-left uk-margin-remove-adjacent  " src="../src/assets/assets/img/user.png" width="40 " height="90 " alt="forum image " caption="forum image ">
     <p class="uk-text-small link">{{ chat.username }} <span style="color:darkgray ">-</span><time class="uk-text-small text-light" style="color:darkgrey;font-size:0.8em ">{{ chat.time }}</time></p>
     <p class="uk-text-small text-light subtitle" style="margin-left: 50px;">{{ chat.comment }}</p>
+    
   </div>
   
 
@@ -40,6 +41,7 @@
 	</div>
 </div>
   </div>
+   <bottomnav></bottomnav>
 </div>
 
 </template>

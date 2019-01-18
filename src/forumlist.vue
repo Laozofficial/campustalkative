@@ -41,6 +41,7 @@
   </div>
 </div>
   </div>
+   <bottomnav></bottomnav>
 </div>
 </template>
 

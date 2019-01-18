@@ -39,15 +39,8 @@
 
 
   </div>
-   <div class="uk-tile uk-tile-default uk-padding-small uk-hidden@m">
-    <div class="uk-flex uk-flex-center">
-      <div class="social-btn"><router-link class="is-white" to="/feed"><span uk-icon="icon: rss; ratio: 1.1"></span></router-link> </div>
-      <div class="social-btn"><router-link class="is-white" to="/feed"><span uk-icon="icon: social; ratio: 1.1"></span></router-link> </div>
-      <div class="social-btn"><router-link class="is-white" to="/notification"><span uk-icon="icon: hashtag; ratio: 1.1"></span></router-link> </div>
-      <div class="social-btn"><router-link class="is-white" to="/forum"><span uk-icon="icon:  comments; ratio: 1.1"></span></router-link> </div>
-      <br>
-  </div>
- </div>
+  <bottomnav></bottomnav>
+</div>
 </div>
 </template>
 
@@ -124,11 +117,24 @@
   min-width: 100%;
   margin: 0;
   font-family: "Lato", sans-serif;
+  padding-bottom: 16px !important;
 }
 
 // .timeline {
 //   overflow-x: scroll;
 // }
+
+.bottom-nav {
+  background-color: #343a40;
+  padding: 15px;
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+.uk-icon-button {
+  background-color: #ff9100;
+  color: white;
+}
 
 .about {
   color: lightgrey !important;
