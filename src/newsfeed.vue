@@ -15,7 +15,15 @@
               <label for="message-text" class="col-form-label">What's on your mind:</label>
               <textarea class="form-control" row="30" id="message-text" v-model="message" ></textarea>
             </div>
-             <input type="file">
+             <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile04">
+              <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+            </div>
+            <!-- <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div> -->
+          </div>
                 <br>
             <input class="btn subtitle uk-align-center btn-block" type="submit" vlaue="submit">
         </form>

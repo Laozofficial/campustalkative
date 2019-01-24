@@ -33,6 +33,7 @@
   </div>
   <br>
 <navfooter></navfooter>
+<bottomnav></bottomnav>
 </div>
 </template>
 
